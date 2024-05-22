@@ -1,6 +1,6 @@
 const errorLabel = document.querySelector("label[for='error-msg']")
-const latInp = document.querySelector("#latitude")
-const lonInp = document.querySelector("#longitude")
+const zipInp = document.querySelector("#zip-code")
+const townInp = document.querySelector("#town-name")
 const airQuality = document.querySelector(".air-quality")
 const airQualityStat = document.querySelector(".air-quality-status")
 const srchBtn = document.querySelector(".search-btn")
@@ -22,8 +22,8 @@ const onPositionGathered = (pos) => {
 	let lat = pos.coords.latitude.toFixed(4), lon = pos.coords.longitude.toFixed(4)
 
 	// Set values of Input for user to know
-	latInp.value = lat
-	lonInp.value = lon
+	zipInp.value = pos.coords.zip
+	townInp.value = pos.coords.town
 
 	// Get Air data from weather API
 	getAirQuality(lat, lon)
@@ -87,11 +87,4 @@ const setComponentsOfAir = airData => {
 }
 
 const onPositionGatherError = e => {
-	errorLabel.innerText = e.message
-}
-
-srchBtn.addEventListener("click", () => {
-	getAirQuality(parseFloat(latInp.value).toFixed(4), parseFloat(lonInp.value).toFixed(4))
-})
-
-getUserLocation()
+	errorLabel.inner
