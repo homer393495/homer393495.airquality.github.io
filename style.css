@@ -1,30 +1,12 @@
-.loc-input {
-	border: 3px solid #269fe6;
-	font-size: 1rem;
-	padding: 8px;
-	border-radius: 6px;
-	margin: 10px;
-	width: 270px;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.town-input {
-	border: 3px solid #269fe6;
-	font-size: 1rem;
-	padding: 8px;
-	border-radius: 6px;
-	margin: 10px;
-	width: 270px;
+h1 {
+  text-align: center;
 }
 
-.search-btn {
-	padding: 10px 14px;
-	background-color: #269fe6;
-	border: none;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 700;
-	font-size: 1rem;
-	border-radius: 4px;
-	color: #fff;
-	margin: 10px;
-	cursor: pointer;
+#airQuality {
+  font-size: 24px;
+  text-align: center;
 }
